@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .h-area {
     width: 100%;
@@ -39,13 +40,19 @@
     background: none;
     margin-bottom: 50px;
     width: 100%;
-    padding: 10px; }
+    padding: 10px;
+    height: auto; }
     .text img {
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      height: 100%;
+      width: auto;
+      display: block; }
+    .text img:last-child {
+      display: none; }
     .text p {
       font-family: c;
-      font-size: 18px;
-      line-height: 36px;
+      font-size: 14px;
+      line-height: 20px;
       font-style: italic;
       color: #404040;
       margin-bottom: 70px; }
@@ -53,6 +60,8 @@
     margin-bottom: 30px;
     width: 100%;
     padding: 0; }
+    .p h3 {
+      background: url(../img/lampl.png) no-repeat; }
     .p h2 {
       font-family: c;
       font-size: 23px;
@@ -75,7 +84,8 @@
         margin: 10px;
         width: 130px;
         height: 130px;
-        overflow: hidden; }
+        overflow: hidden;
+        box-shadow: none; }
         .p ul li img {
           width: 100%; }
       .p ul li:hover {
@@ -120,6 +130,31 @@
       transition: 0.7s;
       opacity: 1; } }
 
+#modal_form {
+  width: 95%;
+  height: 95%;
+  /* Рaзмеры дoлжны быть фиксирoвaны */
+  background: #000;
+  position: fixed;
+  /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+  display: none;
+  /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+  opacity: 0;
+  /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 2;
+  /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 20px 10px;
+  margin: 10px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden; }
+  #modal_form p {
+    color: #fff;
+    z-index: 3;
+    margin: 50px; }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .h-area {
     width: 100%; }
@@ -128,6 +163,10 @@
     background: url(../img/area-bg.png) auto no-repeat;
     margin-bottom: 0px;
     width: 100%; }
+    .text img:last-child {
+      display: block;
+      width: 100%;
+      padding-left: 90px; }
     .text p {
       padding-bottom: 30px; }
   .p {
@@ -164,3 +203,8 @@
   .f-area {
     width: 100%;
     padding: 10px; } }
+
+#modal_form {
+  width: 96%;
+  margin: auto;
+  overflow: hidden; }

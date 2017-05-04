@@ -48,13 +48,20 @@
         margin-bottom: 50px;
         width: 100%;
         padding: 10px;
+        height: auto;
         img {
             margin-bottom: 30px;
+            height: 100%;
+            width: auto;
+            display: block;
+        }
+        img:last-child{
+            display: none;
         }
         p {
             font-family: c;
-            font-size: 18px;
-            line-height: 36px;
+            font-size: 14px;
+            line-height: 20px;
             font-style: italic;
             color: #404040;
             margin-bottom: 70px;
@@ -64,6 +71,9 @@
         margin-bottom: 30px;
         width: 100%;
         padding: 0;
+        h3{
+            background: url(../img/lampl.png) no-repeat;
+        }
         h2 {
             font-family: c;
             font-size: 23px;
@@ -82,23 +92,16 @@
                 width: 130px;
                 height: 130px;
                 overflow: hidden;
-                box-shadow: 0 10px 10px #494949;
+                box-shadow: none;
                 img {
                     width: 100%;
                 }
             }
-            li:hover,
-            li:focus {
-                display: block;
-                position: relative;
-                top: -5px;
-                box-shadow: 0 10px 10px #494949;
+            li:hover {
+                top: 0;
                 cursor: pointer;
-                a {
-                    background: url(../img/prev-hover.png) 0 no-repeat;
-                    background-size: cover;
-                    display: none;
-                }
+                display: block;
+                box-shadow: none;
             }
         }
     }
@@ -142,6 +145,27 @@
         }
     }
 }
+#modal_form {
+	width: 95%; 
+	height: 95%; /* Рaзмеры дoлжны быть фиксирoвaны */
+	background: #000;
+	position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+	display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+	opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+	z-index: 2; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+	padding: 20px 10px;
+    margin: 10px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    p{
+        color: #fff;
+        z-index: 3;
+        margin: 50px;
+    }
+}
 @media only screen and (min-width: 768px) and (max-width:991px) {
 .h-area{
     width: 100%;
@@ -151,6 +175,11 @@
     background: url(../img/area-bg.png) auto no-repeat;
     margin-bottom: 0px;
         width: 100%;
+        img:last-child {
+            display: block;
+            width: 100%;
+            padding-left: 90px;
+        }
         p{
             padding-bottom: 30px;
         }
@@ -198,4 +227,9 @@
         width: 100%;
         padding: 10px;
     }
+}
+#modal_form {
+    width: 96%;
+    margin: auto;
+    overflow: hidden;
 }

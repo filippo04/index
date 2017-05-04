@@ -83,21 +83,28 @@ header {
     color: #fff; }
 
 .text {
-  text-align: center;
-  background: url(../img/area-bg.png) 70% no-repeat;
-  margin-bottom: 50px; }
+  text-align: center; }
   .text img {
-    margin-bottom: 30px; }
+    margin: 0 auto 30px auto;
+    display: block; }
   .text p {
     font-family: c;
     font-size: 18px;
     line-height: 36px;
     font-style: italic;
     color: #404040;
-    margin-bottom: 70px; }
+    margin-bottom: 10px; }
 
 .p {
   margin-bottom: 30px; }
+  .p h3 {
+    width: 100px;
+    height: 100px;
+    background: url(../img/lamp.png) no-repeat;
+    background-size: auto; }
+  .p h3:hover {
+    background: url(../img/lampl.png) no-repeat;
+    transition: 0.1s; }
   .p h2 {
     font-family: c;
     font-size: 23px;
@@ -105,7 +112,8 @@ header {
     font-style: italic;
     color: #404040;
     font-weight: 200;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    text-shadow: 10px 10px 10px #494949; }
   .p ul {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -120,7 +128,8 @@ header {
       margin: 10px;
       width: 22.5%;
       height: 209px;
-      overflow: hidden; }
+      overflow: hidden;
+      box-shadow: 10px 10px 10px #494949; }
       .p ul li img {
         width: 100%; }
     .p ul li:hover {
