@@ -75,22 +75,14 @@
         margin: 10px;
         width: 130px;
         height: 130px;
-        overflow: hidden;
-        box-shadow: 0 10px 10px #494949; }
+        overflow: hidden; }
         .p ul li img {
           width: 100%; }
-      .p ul li:hover,
-      .p ul li:focus {
+      .p ul li:hover {
+        top: 0;
+        cursor: pointer;
         display: block;
-        position: relative;
-        top: -5px;
-        box-shadow: 0 10px 10px #494949;
-        cursor: pointer; }
-        .p ul li:hover a,
-        .p ul li:focus a {
-          background: url(../img/prev-hover.png) 0 no-repeat;
-          background-size: cover;
-          display: none; }
+        box-shadow: none; }
   footer,
   .f-area {
     background: #d45e5e;
